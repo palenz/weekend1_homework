@@ -36,11 +36,13 @@ def get_pets_by_breed(petshop_list, breed):
             breed_counter.append(breed)
     return breed_counter   
 
-#10
+#10 #11
 def find_pet_by_name(petshop_list, pet):
     for animal in petshop_list['pets']:
         if animal['name'] == pet:
             return animal
 
-
+#12
+def remove_pet_by_name(petshop_list, pet):
+    petshop_list['pets'].remove(find_pet_by_name(petshop_list, pet))
 
