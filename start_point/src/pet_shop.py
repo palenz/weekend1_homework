@@ -8,8 +8,11 @@ def get_pet_shop_name(shop):
 def get_total_cash(petshop_list):
     return petshop_list['admin']['total_cash']
 
-#3
+#3 & #4
 def add_or_remove_cash(petshop_list, cash):
     petshop_list['admin']['total_cash'] += cash
 
-#4
+#5
+def get_pets_sold(petshop_list):
+    return petshop_list['admin']['pets_sold']
+
