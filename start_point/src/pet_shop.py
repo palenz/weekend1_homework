@@ -35,3 +35,6 @@ def get_pets_by_breed(petshop_list, breed):
         if pet['breed'] == breed:
             breed_counter.append(breed)
     return breed_counter   
+
+#9
+
