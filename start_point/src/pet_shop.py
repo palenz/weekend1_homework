@@ -54,5 +54,6 @@ def add_pet_to_stock (petshop_list, pet):
 def get_customer_cash(customer_list_index):
     return customer_list_index['cash']
 
-
+def remove_customer_cash(customer_list_index, money_to_substract):
+    customer_list_index['cash'] -= money_to_substract
 
