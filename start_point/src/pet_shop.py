@@ -61,3 +61,7 @@ def remove_customer_cash(customer_list_index, money_to_substract):
 #16
 def get_customer_pet_count(customer_list_index):
     return len(customer_list_index['pets'])
+
+#17
+def add_pet_to_customer(customer_list_index, new_pet):
+    customer_list_index['pets'].append(new_pet)
