@@ -17,10 +17,6 @@ def get_pets_sold(petshop_list):
     return petshop_list['admin']['pets_sold']
 
 #6
-# I've decided to use += instead of = because I feel that the function would be more
-# useful this way. For example, if two cats are sold, I can just plug 2 without
-# having to remember how many have been sold and then add two to that number.
-
 def increase_pets_sold(petshop_list, pet_sold):
     petshop_list['admin']['pets_sold'] += pet_sold
 
@@ -41,6 +37,14 @@ def find_pet_by_name(petshop_list, pet):
     for animal in petshop_list['pets']:
         if animal['name'] == pet:
             return animal
+
+# Additional function for #22
+def pet_exists(petshop_list, pet):
+    for animal in petshop_list['pets']:
+        if animal['name'] == pet:
+            return True
+    else:
+        return False
 
 #12
 def remove_pet_by_name(petshop_list, pet):
@@ -69,5 +73,22 @@ def add_pet_to_customer(customer_list_index, new_pet):
 #18, #19 & #20
 def customer_can_afford_pet(customer, pet):
     return customer['cash'] >= pet['price']
+
+#21
+#  this code does the following:
+#  1. increase the customer pet count.
+#  2. increase the sold pet count.
+#  3. update the customer cash (deduct the pet cost).
+#  4. update the pet shop cash (add the pet sale) (exercise 3)
+
+def sell_pet_to_customer(petshop_list, pet, customer):
+    if pet_exists == True:
+        increase_pets_sold(petshop_list, 1)
+        add_pet_to_customer(customer, pet)
+        remove_customer_cash(customer, pet['price'])
+        add_or_remove_cash(petshop_list, pet['price'])
+
+
+
 
 
